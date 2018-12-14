@@ -1,14 +1,14 @@
 package ru.job4j.calculate;
-//**
-	* Class Calculate решение задачи части 001 урок 1.
-	* @author Tatiana Belkina (stooliv@gmail.com)
-	* @since 11.12.2018 г.
+/**
+* Class Calculate решение задачи части 001 урок 1
+* @author Tatiana Belkina (stooliv@gmail.com)
+* @since 11.12.2018
 */
 
 public class Calculate {
-//* 
-	* Main.
-	* @param args - args.
+/* 
+* Main.
+*@param args - args.
 */
 public static void main(String[] args){
 
