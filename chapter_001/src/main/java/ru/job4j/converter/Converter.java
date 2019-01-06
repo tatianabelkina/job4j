@@ -1,4 +1,5 @@
 package ru.job4j.converter;
+
 /**
  * Корвертор валюты.
  * *author – Tatiana Belkina (stooliv@gmail.com);
@@ -13,9 +14,10 @@ public class Converter {
      * @param value рубли.
      * @return Евро.
      */
-    public int rubleToEuro(int value)  {
-        return value/70;
+    public int rubleToEuro(int value) {
+        return value / 70;
     }
+
     /**
      * Конвертируем евро в рубли.
      *
@@ -23,24 +25,27 @@ public class Converter {
      * @return рубли.
      */
     public int euroToRuble(int value) {
-        return value/70;
+        return value / 70;
     }
+
     /**
      * Конвертируем рубли в доллары.
+     *
      * @param value рубли.
      * @return доллары.
      */
 
-    public int rubleToDollar(int value){
-        return value/60;
+    public int rubleToDollar(int value) {
+        return value / 60;
     }
+
     /**
      * Конвертируем доллары в рубли.
+     *
      * @param value доллары.
      * @return рубли.
      */
-    public int dollarToRuble(int value)
-    {
-        return value/60;
+    public int dollarToRuble(int value) {
+        return value / 60;
     }
 }
