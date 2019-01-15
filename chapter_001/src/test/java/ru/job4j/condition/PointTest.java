@@ -13,6 +13,7 @@ import static org.junit.Assert.assertThat;
  */
 public class PointTest {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private double accuracy = 0.0002;
 
     @Test
