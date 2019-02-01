@@ -14,7 +14,42 @@ import static org.junit.Assert.assertThat;
      * @since 28.01.2019.
      */
 
+
     public class PaintTest {
+        @Test
+        public void whenPyramidRight() {
+            Paint paint = new Paint();
+            String rst = paint.rightTrl(4);
+            System.out.println(rst);
+            assertThat(rst,
+                    is(
+                            new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                                    .add("^   ")
+                                    .add("^^  ")
+                                    .add("^^^ ")
+                                    .add("^^^^")
+                                    .toString()
+                    )
+            );
+        }
+
+        @Test
+        public void whenPyramidLeft() {
+            Paint paint = new Paint();
+            String rst = paint.leftTrl(4);
+            System.out.println(rst);
+            assertThat(rst,
+                    is(
+                            new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                                    .add("   ^")
+                                    .add("  ^^")
+                                    .add(" ^^^")
+                                    .add("^^^^")
+                                    .toString()
+                    )
+            );
+        }
+
         @Test
         public void whenPyramid2Right() {
             Paint paint = new Paint();
