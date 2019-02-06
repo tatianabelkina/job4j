@@ -1,8 +1,11 @@
 package ru.job4j.array;
-
 /**
- * Обертка над строкой.
+ * Array Check.
+ * author – Tatiana Belkina(stooliv@gmail.com).
+ * since – 04.02.2019;
+ * version – 0.1.
  */
+
 public class ArrayChar {
     private char[] data;
 
