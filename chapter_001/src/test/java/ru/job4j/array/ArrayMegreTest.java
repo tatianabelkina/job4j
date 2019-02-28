@@ -52,4 +52,5 @@ public class ArrayMegreTest {
         int[] expected = new int[]{2, 2, 6, 6, 8, 8, 12, 12};
         assertThat(result, is(expected));
     }
+
 }
