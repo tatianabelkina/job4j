@@ -1,7 +1,6 @@
 package ru.job4j.loop;
 
 /**
- *
  * @author Tatiana Belkina(stooliv@gmail.com).
  * @version $Id$
  * @since 29/01/2019

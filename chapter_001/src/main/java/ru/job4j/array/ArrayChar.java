@@ -1,4 +1,5 @@
 package ru.job4j.array;
+
 /**
  * Array Check.
  * author – Tatiana Belkina(stooliv@gmail.com).
@@ -15,6 +16,7 @@ public class ArrayChar {
 
     /**
      * Проверяет. что слово начинается с префикса.
+     *
      * @param prefix префикс.
      * @return если слово начинаеться с префикса
      */
