@@ -3,9 +3,9 @@ package ru.job4j.tracker;
 import java.util.Objects;
 
 /**
- * Item
- *
- * @author Tatiana Belkina
+ * @author Tatiana Belkina.
+ * @version $Id$
+ * @since 0.1
  */
 
 public class Item {
