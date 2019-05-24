@@ -63,7 +63,7 @@ public class StartUI {
     }
 
     /**
-     * Основой цикл программы.
+     * Основной цикл программы.
      */
     public void init() {
         boolean exit = false;
@@ -89,7 +89,7 @@ public class StartUI {
     }
 
     /**
-     * Метод реализует добавленяи новый заявки в хранилище.
+     * Метод реализует добавление новой заявки в хранилище.
      */
     private void createItem() {
         System.out.println("------------ Добавление новой заявки --------------");
@@ -118,7 +118,11 @@ public class StartUI {
         System.out.println("------------ Поиск заявки по ID --------------");
         String id = this.input.ask("Введите ID заявки :");
         Item item = this.tracker.findById(id);
-        System.out.println("------------ ID : " + item.getId() + " NAME : " + item.getName() + " DESCRIPTION : " + item.getDecs() + " -----------");
+        if (item != null) {
+            System.out.println("------------ ID : " + item.getId() + " NAME : " + item.getName() + " DESCRIPTION : " + item.getDecs() + " -----------");
+        } else {
+            System.out.println("Заявки с указанным ID не найдено");
+        }
     }
 
     /**
@@ -127,6 +131,7 @@ public class StartUI {
     private void showItemByName() {
         System.out.println("------------ Поиск заявки по NAME --------------");
         String name = this.input.ask("Введите NAME заявки :");
+
         Item[] items = this.tracker.findByName(name);
         for (Item item : items) {
             System.out.println("------------ ID : " + item.getId() + " NAME : " + item.getName() + " DESCRIPTION : " + item.getDecs() + " -----------");
@@ -151,13 +156,11 @@ public class StartUI {
      */
     private void replaceItem() {
         System.out.println("------------ Изменение заявки --------------");
-        String id = this.input.ask("Введите ID изменяемой заявки :");
+        String id = this.input.ask("Введите id изменяемой заявки :");
         String name = this.input.ask("Введите новое имя заявки :");
         String desc = this.input.ask("Введите новое описание заявки :");
-        Item item = this.tracker.findById(id);
+        Item item = new Item(name, desc, System.currentTimeMillis());
         if (this.tracker.replace(id, item)) {
-            item.setName(name);
-            item.setDecs(desc);
             System.out.println("------------ Заявка : " + id + " изменена -----------");
         } else {
             System.out.println("------------ Заявка : " + id + " не найдена -----------");
